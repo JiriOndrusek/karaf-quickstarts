@@ -126,6 +126,25 @@
             <artifactId>org.apache.servicemix.specs.jaxws-api-2.2</artifactId>
         </dependency>
 
+        <!-- ASM dependencies -->
+
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-tree</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-analysis</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -255,6 +274,7 @@
                         <Export-Package>
                             org.jboss.fuse.quickstarts.cxf.soap
                         </Export-Package>
+                        <Embed-Dependency>asm*</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
