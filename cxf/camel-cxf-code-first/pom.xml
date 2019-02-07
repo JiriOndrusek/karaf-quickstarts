@@ -111,6 +111,25 @@
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
         </dependency>
 
+        <!-- ASM dependencies -->
+
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-tree</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-analysis</artifactId>
+        </dependency>
+
         <!-- Test dependencies -->
 
         <dependency>
@@ -211,6 +230,7 @@
                         <Export-Package>
                             org.jboss.fuse.quickstarts.cxf.codefirst
                         </Export-Package>
+                        <Embed-Dependency>asm*</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>

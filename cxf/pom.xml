@@ -41,4 +41,36 @@
         <module>soap</module>
     </modules>
 
+    <properties>
+        <!-- Cxf depends on asm version, which is not deployed in fuse-karaf, dependency has to be embedded -->
+        <version.asm6>6.2.1</version.asm6>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ASM dependencies -->
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>${version.asm6}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm-util</artifactId>
+                <version>${version.asm6}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm-tree</artifactId>
+                <version>${version.asm6}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm-analysis</artifactId>
+                <version>${version.asm6}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
 </project>
