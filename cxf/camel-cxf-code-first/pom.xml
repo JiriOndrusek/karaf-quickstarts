@@ -208,6 +208,10 @@
                     <obrRepository>NONE</obrRepository>
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Import-Package>
+                            org.objectweb.asm;version="[7,8)",
+                            *
+                        </Import-Package>
                         <Export-Package>
                             org.jboss.fuse.quickstarts.cxf.codefirst
                         </Export-Package>
